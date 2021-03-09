@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --body-bg-color: #f7f7f8;
+  --nav-bg-color: #ffffff;
+  --nav-border-bottom: #e9e9ea;
+  --center-bar-links: #ccc;
+  --input-bg: #e5e5e5;
+  --input-border-hover: #a5a5a5;
+  --nav-search-disable-enable: #d4d4d4;
+  --icon-hover: #464649;
+  --icon-fill: #000;
+  --twitch-color: #9147ff;
+  --button-nav-color: #e5e5e549;
+}
+
+html.dark {
+  --body-bg-color: #0e0e10;
+  --nav-bg-color: #18181b;
+  --nav-border-bottom: #040404;
+  --center-bar-links: #333;
+  --input-bg: #464649;
+  --nav-search-disable-enable: #a4a4a4;
+  --icon-fill: #e2e2e4;
+  --button-nav-color: #464649;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.display-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.height-100percent {
+  height: 100%;
+}
+
+input,
+button,
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--body-bg-color);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.12rem;
+  background-color: var(--nav-bg-color);
+  box-shadow: 0 1px 1px var(--nav-border-bottom),
+    0 1px 1px var(--nav-border-bottom), 0 2px 1px var(--nav-border-bottom),
+    0 2px 1px var(--nav-border-bottom);
+}
+
+.first-scope {
+  height: 100%;
+}
+
+.first-scope .svg-container {
+  padding: 0.31rem;
+}
+
+.navigation-links {
+  height: 100%;
+}
+
+.navigation-links .nav-link {
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0 0.62rem;
+  flex-direction: column;
+  height: 100%;
+  color: var(--icon-fill);
+}
+
+.nav-link div:first-child {
+  height: 100%;
+  cursor: pointer;
+}
+
+.nav-link div:first-child:hover {
+  color: var(--twitch-color);
+}
+
+.nav-link .link-dash {
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+}
+
+.navigation-links .nav-links-center-bar {
+  width: 0.5px;
+  height: 60%;
+  background-color: var(--center-bar-links);
+}
+
+.icon {
+  height: 100%;
+  padding: 0 0.62rem;
+}
+
+.icon a {
+  width: 1.87rem;
+  height: 1.87rem;
+  border-radius: 4px;
+}
+
+.icon a:hover {
+  background-color: #e5e5e5;
+}
+
+.icon svg {
+  fill: var(--icon-fill);
+}
+
+.center-scope {
+  margin-left: -2.12rem;
+}
+
+.center-scope .input-container {
+  position: relative;
+}
+
+.center-scope input {
+  padding: 0.31rem 1.75rem 0.31rem 0.62rem;
+  width: 22.18rem;
+  height: 2.25rem;
+  font-size: 0.86rem;
+  color: var(--icon-fill);
+  background-color: var(--input-bg);
+  border: 2px solid transparent;
+  border-radius: 6px 0 0 6px;
+  transition: 0.2s ease;
+}
+
+.center-scope input::placeholder {
+  color: var(--icon-fill);
+}
+
+.center-scope input:hover {
+  border-color: var(--input-border-hover);
+}
+
+.center-scope input:focus {
+  border: 2px solid var(--twitch-color);
+  outline: none;
+  background-color: #fff;
+}
+
+.center-scope i {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  padding: 0.2rem;
+  color: red;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.center-scope button {
+  height: 2.25rem;
+  width: 2.12rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.center-scope button:focus {
+  outline: none;
+}
+
+.center-scope button:disabled {
+  height: 2.25rem;
+  width: 2.12rem;
+  border: 0;
+  cursor: not-allowed;
+}
+
+.center-scope button svg {
+  fill: black;
+}
+
+.center-scope button.disable svg {
+  fill: var(--nav-search-disable-enable);
+}
+
+.last-scope .icon {
+  padding: 0 0.32rem;
+}
+
+.last-scope .button-container button {
+  width: 7.81rem;
+  height: 1.87rem;
+  font-size: 0.81rem;
+  font-weight: 600;
+  border: 0;
+  background-color: var(--button-nav-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.last-scope .button-container button:hover {
+  background-color: var(--input-bg);
+}
+
+.last-scope .button-container button:focus {
+  outline: none;
+}
+
+.last-scope .button-container button svg {
+  fill: var(--icon-fill);
+}
+
+.last-scope .button-container button p {
+  margin-left: 5px;
+  color: var(--icon-fill);
+}
+
+.last-scope .profile {
+  position: relative;
+  margin: 0 0.62rem;
+  cursor: pointer;
+}
+
+.last-scope .profile .image-container {
+  width: 1.87rem;
+  height: 1.87rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.last-scope .profile img {
+  width: 100%;
+}
+
+.last-scope .profile .profile-presence-dot {
+  width: 0.62rem;
+  height: 0.62rem;
+  background-color: var(--input-border-hover);
+  border: 2px solid var(--nav-bg-color);
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

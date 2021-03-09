@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <title>Twitch Navbar</title>
+</head>
+<body>
+
+  <nav>
+    <div class="first-scope display-flex">
+      <div class="svg-container display-flex">
+        <svg overflow="visible" width="40px" height="40px" version="1.1" viewBox="0 0 40 40" x="0px" y="0px">
+          <g>
+            <polygon points="13 8 8 13 8 31 14 31 14 36 19 31 23 31 32 22 32 8" class="ScBody-cdc1ai-3 iMXlFV" fill="#9147FF"></polygon>
+            <polygon points="26 25 30 21 30 10 14 10 14 25 18 25 18 29 22 25" class="ScFace-cdc1ai-4 eKFQBH" fill="white"></polygon>
+            <g class="logo-eyes" fill='#9147FF'>
+              <path d="M20,14 L22,14 L22,20 L20,20 L20,14 Z M27,14 L27,20 L25,20 L25,14 L27,14 Z" ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="navigation-links display-flex">
+        <div class="nav-link display-flex">
+          <div class="display-flex">
+            <p>Seguindo</p>
+          </div>
+          <div class="link-dash"></div>
+        </div>
+
+        <div class="nav-link display-flex">
+          <div class="display-flex">
+            <p>Procurar</p>
+          </div>
+          <div class="link-dash"></div>
+        </div>
+
+        <div class="nav-links-center-bar"></div>
+
+        <div class="nav-link display-flex">
+          <div class="display-flex">
+            <p>Esports</p>
+          </div>
+          <div class="link-dash"></div>
+        </div>
+
+        <div class="nav-link display-flex">
+          <div class="display-flex">
+            <p>Música</p>
+          </div>
+          <div class="link-dash"></div>
+        </div>
+      </div>
+
+      <div class="icon display-flex" title="Mais">
+        <a href="#" class="display-flex">
+          <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"><g><path d="M2 10a2 2 0 114 0 2 2 0 01-4 0zM8 10a2 2 0 114 0 2 2 0 01-4 0zM16 8a2 2 0 100 4 2 2 0 000-4z"></path></g></svg>
+        </a>
+      </div>
+    </div>
+
+
+    
+    <div class="center-scope display-flex">
+      <div class="input-container">
+        <input type="text" placeholder="Buscar">
+        <i class="fas fa-times" onclick="clearNavInput()"></i>
+      </div>
+
+      <button class="display-flex" disabled onclick="clearNavInput()">
+        <svg width="24px" height="24px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="ScIconSVG-sc-1bgeryd-1 cMQeyU"><g><path fill-rule="evenodd" d="M13.192 14.606a7 7 0 111.414-1.414l3.101 3.1-1.414 1.415-3.1-3.1zM14 9A5 5 0 114 9a5 5 0 0110 0z" clip-rule="evenodd"></path></g></svg>
+      </button>
+    </div>
+
+
+
+    <div class="last-scope display-flex">
+      <div class="icon display-flex" title="Loot Prime">
+        <a href="#" class="display-flex">
+          <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M13.798 10.456L10 6.657l-3.798 3.799L4 8.805V13h12V8.805l-2.202 1.65zM18 5v8a2 2 0 0 1-2 2H4a2.002 2.002 0 0 1-2-2V5l4 3 4-4 4 4 4-3z"></path></g></svg>
+        </a>
+      </div>
+
+      <div class="icon display-flex" title="Notificações">
+        <a href="#" class="display-flex">
+          <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"><g><path fill-rule="evenodd" d="M4 3h12l2 4v10H2V7l2-4zm.236 4H8v1a1 1 0 001 1h2a1 1 0 001-1V7h3.764l-1-2H5.236l-1 2zM16 9h-2.17A3.001 3.001 0 0111 11H9a3.001 3.001 0 01-2.83-2H4v6h12V9z" clip-rule="evenodd"></path></g></svg>
+        </a>
+      </div>
+
+      <div class="icon display-flex" title="Sussurros">
+        <a href="#" class="display-flex">
+          <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"><g><path fill-rule="evenodd" d="M7.828 13L10 15.172 12.172 13H15V5H5v8h2.828zM10 18l-3-3H5a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2l-3 3z" clip-rule="evenodd"></path></g></svg>
+        </a>
+      </div>
+
+      <div class="button-container">
+        <button class="display-flex">
+          <svg width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 12l7-10 7 10-7 6-7-6zm2.678-.338L10 5.487l4.322 6.173-.85.728L10 11l-3.473 1.39-.849-.729z"></path></svg><p>Comprar Bits</p>
+        </button>
+      </div>
+
+      <div class="profile" onclick="darkmode()">
+        <div class="image-container">
+          <img src="https://www.github.com/ruuuff.png" alt="Profile">
+        </div>
+        <div class="profile-presence-dot"></div>
+      </div>
+    </div>
+  </nav>
+
+  <script src="./script.js"></script>
+</body>
+</html>
