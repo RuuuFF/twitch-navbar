@@ -6,12 +6,17 @@
   --nav-border-bottom: #e9e9ea;
   --center-bar-links: #ccc;
   --input-bg: #e5e5e5;
-  --input-border-hover: #a5a5a5;
+  --input-bg-focus: #fff;
+  --input-color: #757575;
+  --nav-search-bg: transparent;
   --nav-search-disable-enable: #d4d4d4;
-  --icon-hover: #464649;
+  --button-nav-bg: #e5e5e599;
+  --button-nav-bg-hover: #e5e5e5;
   --icon-fill: #000;
+  --icon-hover: #d5d5d5;
+
+  --input-border-hover: #a5a5a5;
   --twitch-color: #9147ff;
-  --button-nav-color: #e5e5e549;
 }
 
 html.dark {
@@ -20,9 +25,14 @@ html.dark {
   --nav-border-bottom: #040404;
   --center-bar-links: #333;
   --input-bg: #464649;
-  --nav-search-disable-enable: #a4a4a4;
+  --input-bg-focus: #000;
+  --input-color: #c4c4c4;
+  --nav-search-bg: #29292c;
+  --nav-search-disable-enable: #5a5a5c;
   --icon-fill: #e2e2e4;
-  --button-nav-color: #464649;
+  --button-nav-bg: #363639;
+  --button-nav-bg-hover: #444;
+  --icon-hover: #464649;
 }
 
 * {
@@ -92,10 +102,18 @@ nav {
   color: var(--twitch-color);
 }
 
+.nav-link div:first-child.click {
+  color: var(--twitch-color);
+}
+
 .nav-link .link-dash {
   width: 100%;
   height: 2px;
   background-color: transparent;
+}
+
+.nav-link div:first-child.click ~ .link-dash {
+  background-color: var(--twitch-color);
 }
 
 .navigation-links .nav-links-center-bar {
@@ -116,7 +134,7 @@ nav {
 }
 
 .icon a:hover {
-  background-color: #e5e5e5;
+  background-color: var(--icon-hover);
 }
 
 .icon svg {
@@ -136,15 +154,15 @@ nav {
   width: 22.18rem;
   height: 2.25rem;
   font-size: 0.86rem;
-  color: var(--icon-fill);
+  color: var(--input-color);
   background-color: var(--input-bg);
   border: 2px solid transparent;
   border-radius: 6px 0 0 6px;
-  transition: 0.2s ease;
+  transition: border 0.2s ease;
 }
 
 .center-scope input::placeholder {
-  color: var(--icon-fill);
+  color: var(--input-color);
 }
 
 .center-scope input:hover {
@@ -154,7 +172,7 @@ nav {
 .center-scope input:focus {
   border: 2px solid var(--twitch-color);
   outline: none;
-  background-color: #fff;
+  background-color: var(--input-bg-focus);
 }
 
 .center-scope i {
@@ -172,8 +190,10 @@ nav {
 .center-scope button {
   height: 2.25rem;
   width: 2.12rem;
+  margin-left: 1px;
   border: 0;
-  background-color: transparent;
+  border-radius: 0 6px 6px 0;
+  background-color: var(--nav-search-bg);
   cursor: pointer;
 }
 
@@ -189,7 +209,7 @@ nav {
 }
 
 .center-scope button svg {
-  fill: black;
+  fill: var(--icon-fill);
 }
 
 .center-scope button.disable svg {
@@ -206,13 +226,13 @@ nav {
   font-size: 0.81rem;
   font-weight: 600;
   border: 0;
-  background-color: var(--button-nav-color);
+  background-color: var(--button-nav-bg);
   border-radius: 4px;
   cursor: pointer;
 }
 
 .last-scope .button-container button:hover {
-  background-color: var(--input-bg);
+  background-color: var(--button-nav-bg-hover);
 }
 
 .last-scope .button-container button:focus {
